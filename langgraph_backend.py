@@ -39,4 +39,16 @@ graph_builder.add_edge("chat_node", END)
 # Compile the graph into a runnable object
 chatbot = graph_builder.compile(checkpointer=checkpointer)
 
-print("✅ LangGraph backend compiled successfully.")
+# Implementation of Streaming
+# for message_chunk, metadata in chatbot.stream(
+#     {
+#         'messages': [HumanMessage(content='What is the recipe to make Butter Chicken')]
+#     },
+#     config = {'configurable': {'thread_id': 'thread-1'}},
+#     stream_mode="messages"
+# ):
+#     if message_chunk.content:
+#         print(message_chunk.content, end=' ', flush=True)
+
+
+
